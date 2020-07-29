@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'navBar.dart';
+import 'header.dart';
+import 'body.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,13 +20,17 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Container(
         child: SingleChildScrollView(
-          child: Column(
-            children: <Widget>[
-              SizedBox(
-                height: 5,
-              ),
-              NavBar(),
-            ],
+          child: Center(
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 5,
+                ),
+                Header(),
+                NavBar(),
+                Body(),
+              ],
+            ),
           ),
         ),
       ),
