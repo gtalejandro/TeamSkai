@@ -20,8 +20,9 @@ class Body extends StatelessWidget {
 class BodyEscritorio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double ancho = MediaQuery.of(context).size.width;
     return Container(
-      width: 1280,
+      width: ancho / 1.111111,
       color: Colors.lightGreenAccent,
       child: Column(
         children: [
@@ -36,7 +37,7 @@ class BodyEscritorio extends StatelessWidget {
                 ),
               ),
               Expanded(
-                flex: 4,
+                flex: 3,
                 child: Column(
                   children: [
                     Text(
@@ -64,3 +65,43 @@ class BodyEscritorio extends StatelessWidget {
     );
   }
 }
+
+class Seccion extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {}
+}
+
+/* Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Expanded(
+                child: Container(
+                  width: 200,
+                  height: 200,
+                  color: Colors.red[800],
+                ),
+              ),
+              Expanded(
+                flex: 3,
+                child: Column(
+                  children: [
+                    Text(
+                      'QUIENES SOMOS',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    Text(
+                      'Somos una familia comprometida con la comunidad para la formacion de disciplina y capacidad fisica de nuestros jovenes. Principalmente esta a la cabeza el sensei Jose Alfredo Jimenez, el cual tiene una gran trayectoria en las artes marciales.',
+                      style: TextStyle(
+                        fontSize: 17,
+                      ),
+                      textAlign: TextAlign.justify,
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),*/

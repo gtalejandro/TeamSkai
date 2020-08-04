@@ -20,30 +20,23 @@ class Header extends StatelessWidget {
 class HeaderEscritorio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double ancho = MediaQuery.of(context).size.width;
+    double alto = MediaQuery.of(context).size.height;
     return Container(
-      width: 1280,
-      height: 300,
+      width: ancho / 1.11111,
+      height: alto / 6.66666,
       color: Colors.black12,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Expanded(
             flex: 1,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 200,
-                  height: 200,
-                  color: Colors.red[800],
-                ),
-              ],
-            ),
+            child: Container(),
           ),
           Expanded(
             flex: 3,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
                   'TEAM ESKAI DOJO',
@@ -51,9 +44,6 @@ class HeaderEscritorio extends StatelessWidget {
                       fontSize: 40,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
-                ),
-                SizedBox(
-                  height: 50,
                 ),
                 Text(
                   'Ven a aprender, ejercitar y divertirte en un solo lugar. Disciplina incluida!',

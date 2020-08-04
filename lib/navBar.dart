@@ -20,9 +20,11 @@ class NavBar extends StatelessWidget {
 class NavEscritorio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double ancho = MediaQuery.of(context).size.width;
+    double alto = MediaQuery.of(context).size.height;
     return Container(
-      width: 1280,
-      height: 50,
+      width: ancho / 1.11111,
+      height: alto / 20,
       color: Colors.yellow[500],
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
