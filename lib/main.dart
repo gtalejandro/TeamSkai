@@ -18,19 +18,18 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: SingleChildScrollView(
-          child: Center(
-            child: Column(
-              children: <Widget>[
-                SizedBox(
-                  height: 5,
-                ),
-                Header(),
-                NavBar(),
-                Body(),
-              ],
-            ),
+      backgroundColor: Colors.blue[300],
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              SizedBox(
+                height: 5,
+              ),
+              Header(),
+              NavBar(),
+              Body(),
+            ],
           ),
         ),
       ),

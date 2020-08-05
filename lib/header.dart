@@ -23,16 +23,22 @@ class HeaderEscritorio extends StatelessWidget {
     double ancho = MediaQuery.of(context).size.width;
     double alto = MediaQuery.of(context).size.height;
     return Container(
-      width: ancho / 1.11111,
-      height: alto / 6.66666,
-      color: Colors.black12,
+      color: Colors.blue[300],
+      constraints: BoxConstraints.expand(
+        width: ancho / 1.11111,
+        height: alto / 4,
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Expanded(
-            flex: 1,
-            child: Container(),
-          ),
+              flex: 1,
+              child: Container(
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/TED.png'),
+                        fit: BoxFit.fitWidth)),
+              )),
           Expanded(
             flex: 3,
             child: Column(
@@ -41,16 +47,19 @@ class HeaderEscritorio extends StatelessWidget {
                 Text(
                   'TEAM ESKAI DOJO',
                   style: TextStyle(
+                      fontFamily: 'MarckScript',
                       fontSize: 40,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white),
+                      color: Colors.black,
+                      decorationColor: Colors.white),
                 ),
                 Text(
                   'Ven a aprender, ejercitar y divertirte en un solo lugar. Disciplina incluida!',
                   style: TextStyle(
+                    fontFamily: 'Enriqueta',
                     fontSize: 27,
                     fontWeight: FontWeight.bold,
-                    color: Colors.blue[300],
+                    color: Colors.black,
                   ),
                   textAlign: TextAlign.center,
                 )

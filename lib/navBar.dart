@@ -25,7 +25,7 @@ class NavEscritorio extends StatelessWidget {
     return Container(
       width: ancho / 1.11111,
       height: alto / 20,
-      color: Colors.yellow[500],
+      color: Colors.red[500],
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -35,6 +35,10 @@ class NavEscritorio extends StatelessWidget {
             onPressed: () {},
             child: Text(
               'Conocenos',
+              style: TextStyle(
+                fontFamily: 'Enriqueta',
+                fontSize: 18,
+              ),
             ),
           )),
           Expanded(
@@ -42,6 +46,10 @@ class NavEscritorio extends StatelessWidget {
             onPressed: () {},
             child: Text(
               'Eventos',
+              style: TextStyle(
+                fontFamily: 'Enriqueta',
+                fontSize: 18,
+              ),
             ),
           )),
           Expanded(
@@ -49,6 +57,10 @@ class NavEscritorio extends StatelessWidget {
               onPressed: () {},
               child: Text(
                 'Tienda',
+                style: TextStyle(
+                  fontFamily: 'Enriqueta',
+                  fontSize: 18,
+                ),
               ),
             ),
           )
