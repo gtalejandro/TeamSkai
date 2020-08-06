@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'navBar.dart';
-import 'header.dart';
-import 'body.dart';
+import 'index.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,22 +15,12 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.blue[300],
-      body: SingleChildScrollView(
-        child: Center(
-          child: Column(
-            children: <Widget>[
-              SizedBox(
-                height: 5,
-              ),
-              Header(),
-              NavBar(),
-              Body(),
-            ],
-          ),
-        ),
-      ),
-    );
+    return LayoutBuilder(builder: (context, constraints) {
+      if (constraints.maxWidth > 1024) {
+        return Index();
+      } else {
+        return null;
+      }
+    });
   }
 }
