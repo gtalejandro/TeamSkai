@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'escritorioElementos.dart';
 
+//Posibles soluciones para el scroll de la pantalla:
+// 1: Investigar si los widgets scroleables tienen alguna propiedad fixed.
+// 2: Por dos capas, el heder la trasera y lo demas la delantera. Dejarla a tal altura de modo que
+//    al scrolear la de adelante oculte la de atras.
 class Index extends StatelessWidget {
+  //TODO: Pensar en que forma se van a representar los estados para la navegacion entre contenido.
+  //TODO: Investigar colores y fuentes. constantes de estilos.
   @override
   Widget build(BuildContext context) {
     return Scaffold(
